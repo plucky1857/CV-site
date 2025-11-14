@@ -1,46 +1,84 @@
-/* Reset to keep things clean */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Full-page gradient background */
+/* Neon-glow animated gradient background */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    background: linear-gradient(135deg, #1b2a49, #305a8c, #3c79b0);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    color: #d9eaff;
+    background: radial-gradient(circle at center, #0a1e3f, #051124 60%, #030a18);
+    position: relative;
     min-height: 100vh;
+    overflow: hidden;
 }
 
-/* Slow animated gradient for that modern “tech-y” vibe */
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Add glowing light orbs for ambience */
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.4;
+    animation: floaty 12s ease-in-out infinite alternate;
+    z-index: 0;
 }
 
-/* Hero section */
+body::before {
+    background: rgba(0, 136, 255, 0.9);
+    top: -150px;
+    left: -150px;
+}
+
+body::after {
+    background: rgba(0, 200, 255, 0.7);
+    bottom: -150px;
+    right: -150px;
+    animation-delay: 3s;
+}
+
+/* Floating movement */
+@keyframes floaty {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(40px, -40px); }
+}
+
+/* Hero layout */
 .hero {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    z-index: 1;
     padding: 20px;
 }
 
-/* Header text */
+/* Neon-glow title */
 .hero-title {
     font-size: 4rem;
     font-weight: 700;
     letter-spacing: 2px;
+    color: #e8f1ff;
+    text-shadow:
+        0 0 10px #66ccff,
+        0 0 20px #66ccff,
+        0 0 40px #33aaff,
+        0 0 80px #0099ff;
 }
 
+/* Subtitle glow */
 .hero-subtitle {
     font-size: 1.4rem;
-    margin-top: 10px;
-    opacity: 0.85;
+    margin-top: 12px;
+    opacity: 0.9;
+    text-shadow:
+        0 0 6px #66ccff,
+        0 0 14px #33aaff;
 }
