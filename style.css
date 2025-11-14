@@ -187,34 +187,53 @@ section {
     margin-bottom: 4px;
 }
 
-/* Skills section */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Force 2 columns for desktop */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for desktop */
     gap: 30px;
     margin-top: 40px;
-}
-
-/* Responsive: stack to 1 column on smaller screens */
-@media (max-width: 700px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; /* allows pseudo-elements for glow */
 }
 
 .skill-box {
     background: rgba(0, 20, 40, 0.4);
-    padding: 20px;
+    padding: 30px 20px;
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 150, 255, 0.3);
     backdrop-filter: blur(6px);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Neon glow lines behind each box */
+.skill-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(0,136,255,0.5), rgba(0,255,255,0.3));
+    transform: rotate(25deg);
+    filter: blur(40px);
+    z-index: 0;
+}
+
+.skill-box h3,
+.skill-box ul,
+.skill-box li {
+    position: relative; /* make sure text sits above the glow */
+    z-index: 1;
 }
 
 .skill-box:hover {
     transform: translateY(-6px);
-    box-shadow: 0 0 25px rgba(0, 180, 255, 0.6);
+    box-shadow: 0 0 30px rgba(0, 180, 255, 0.7);
 }
 
 .skill-box h3 {
@@ -233,6 +252,13 @@ section {
     margin-bottom: 6px;
     color: #cfe7ff;
     text-shadow: 0 0 4px rgba(100,150,255,0.5);
+}
+
+/* Responsive: stack to 1 column on smaller screens */
+@media (max-width: 700px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .contact {
