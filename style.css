@@ -190,9 +190,16 @@ section {
 /* Skills section */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Force 2 columns for desktop */
     gap: 30px;
     margin-top: 40px;
+}
+
+/* Responsive: stack to 1 column on smaller screens */
+@media (max-width: 700px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .skill-box {
