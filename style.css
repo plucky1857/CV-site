@@ -11,8 +11,7 @@ body {
     color: #d9eaff;
     background: radial-gradient(circle at center, #0a1e3f, #051124 60%, #030a18);
     position: relative;
-    min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden; /* keep horizontal overflow hidden */
 }
 
 /* Add glowing light orbs for ambience */
@@ -50,7 +49,7 @@ body::after {
 
 /* Hero layout */
 .hero {
-    height: 100vh;
+    min-height: 100vh; /* instead of height: 100vh, allows content below to flow */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,6 +113,10 @@ section {
     margin-bottom: 20px;
     color: #e3f1ff;
     text-shadow: 0 0 6px rgba(100,150,255,0.4);
+}
+
+.about {
+    margin-top: 40px;
 }
 
 /* PROJECT GRID */
