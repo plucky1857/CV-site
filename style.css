@@ -227,3 +227,34 @@ section {
     color: #cfe7ff;
     text-shadow: 0 0 4px rgba(100,150,255,0.5);
 }
+
+.contact {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contact-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #cfe7ff;
+    text-shadow: 0 0 6px rgba(100,150,255,0.5);
+}
+
+.contact-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgba(0, 20, 40, 0.4);
+    color: #66ccff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    text-shadow: 0 0 6px #66ccff;
+    box-shadow: 0 0 15px rgba(0, 150, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(0, 180, 255, 0.7);
+}
