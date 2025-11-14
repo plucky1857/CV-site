@@ -1,0 +1,46 @@
+/* Reset to keep things clean */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-page gradient background */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #1b2a49, #305a8c, #3c79b0);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+}
+
+/* Slow animated gradient for that modern “tech-y” vibe */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hero section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header text */
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    opacity: 0.85;
+}
