@@ -165,3 +165,24 @@ section {
     line-height: 1.6;
     color: #cfe7ff;
 }
+
+.project-features {
+    text-align: left;
+    margin-top: 12px;
+}
+
+.project-features h4 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    text-shadow: 0 0 8px #66ccff;
+}
+
+.project-features ul {
+    padding-left: 20px;
+    color: #cfe7ff;
+    list-style-type: disc;
+}
+
+.project-features li {
+    margin-bottom: 4px;
+}
