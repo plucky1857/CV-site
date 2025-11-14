@@ -82,3 +82,83 @@ body::after {
         0 0 6px #66ccff,
         0 0 14px #33aaff;
 }
+
+/* Section spacing */
+section {
+    padding: 80px 20px;
+    color: #dceaff;
+    position: relative;
+    z-index: 1;
+}
+
+/* Section titles with neon glow */
+.glowing-title {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 40px;
+    text-shadow:
+        0 0 10px #66ccff,
+        0 0 20px #33aaff,
+        0 0 40px #0099ff;
+}
+
+/* About content */
+.about .container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #e3f1ff;
+    text-shadow: 0 0 6px rgba(100,150,255,0.4);
+}
+
+/* PROJECT GRID */
+.projects .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Project card */
+.project-card {
+    background: rgba(0, 20, 40, 0.4);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.3);
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 180, 255, 0.6);
+}
+
+/* Text above GIF */
+.project-header {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #66ccff;
+}
+
+/* The GIF itself */
+.project-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.5);
+    margin-bottom: 12px;
+}
+
+/* Text below GIF */
+.project-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #cfe7ff;
+}
